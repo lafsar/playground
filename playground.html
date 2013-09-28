@@ -64,10 +64,30 @@
             //MUST INPUT iIN FORMAT XXX.cc  zero cents must be explicitly stated
 			var amount = "356.21";
             document.writeln("amount is: $" + amount + "<br>");
-			document.writeln(JSON.stringify(currency(amount)));
+			document.writeln(JSON.stringify(currency(amount))+"<br>");
 			</script>
 		</li>
+        <li><h3>Create a function that splits the values into the title, year, and</h3><h3> number of votes and returns a list of movie objects sorted by year.</h3>
+        <script src="./sortmovies.js"></script>
+        <script>
+            var items = [
+                'The Shawshank Redemption,1994,1043071',
+                'The Godfather,1972,732416',
+                'The Godfather: Part II,1974,474640',
+                'Pulp Fiction,1994,806431',
+                'The Dark Knight,2008,1017508',
+                '12 Angry Men,1957,255846',
+                'Schindler\'s List,1993,528900',
+                'The Lord of the Rings: The Return of the King,2003,738931',
+                'Fight Club,1999,791186',
+                'Star Wars: Episode V - The Empire Strikes Back,1980,503348'];
+            
 
+          
+            document.writeln(JSON.stringify(movieSort(items)));
+        
+        </script>
+        </li>
 </body>
 
 

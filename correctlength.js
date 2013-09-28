@@ -24,10 +24,9 @@ var spacecount = 0;
         }
     }
 		
-	if(emptyarray.length===0 && number >0 )
+	if(emptyarray.length===0)
 		return "no element exists that is greater than that length";
-		else if(number <-1 || typeof number != 'number')
-		return "Don't be a jerk!";
+		
 	if (spacecount >0)
 	return "you have " + spacecount + " empty or undefined strings";
 
