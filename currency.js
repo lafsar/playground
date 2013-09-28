@@ -24,8 +24,11 @@ var denominations = [
     {key:'twenties: ', value:2000},
     {key:'fifties: ',value:5000},
     {key:'hundreds: ',value:10000}];  
-    var finalnum = number.toString();
+    
+    finalnum= parseFloat(number)*100; //the easy way
 
+    //The hard way
+    /* var finalnum = number.toString();
     for(var i=0; i<=finalnum.length-1; i++) {
         if(finalnum[i] ==='.'){
             finalnum= finalnum.split("");
@@ -37,11 +40,9 @@ var denominations = [
             }
          }
     }
-  
      
-     
-     if( Object.prototype.toString.call(finalnum ) === '[object Array]' )
-        finalnum=finalnum.join(''); //if result is an array make it a string
+   if( Object.prototype.toString.call(finalnum ) === '[object Array]' )
+        finalnum=finalnum.join(''); //if result is an array make it a string*/
    
 var finale ={};    
  for (var x=denominations.length-1; x>=0; x--) {
