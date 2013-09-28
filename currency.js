@@ -24,15 +24,81 @@ var currency = function (number) {
     return finalnum;
 }
 var change = {
-pennies : function (number){}
-nickles : function (number){}    
-dimes: function (number){}
-quarters: function (number){}
-ones: function (number){}
-fives: function (number){}
-tens: function (number){}
-twenties: function (number){}
-fifties: function (number){}
-hundreds: function (number){}
+  pennies : function (number){
+    num = currency(number);
+    num = parseInt(num.substring(num.length-3,num.length);
+    if(num < 25 && num % 25 < 5  )
+        return num
+    else if (num > 25 && num < 30)
+        return num % 25;
+    else if (num >29 && num <40 )
+        return (num % 25) - 10;
+    else if (
+  }
+  nickles : function (number){ 
+    num = currency(number);
+    num = parseInt(num.substring(num.length-3,num.length);
+    if(num >= 5 && num <= 9)
+        return 1;
+    else
+        return 0;
+}    
+  dimes: function (number){ 
+      num = currency(number);
+    num = parseInt(num.substring(num.length-3,num.length));
+    if(num < 25 && num >= 20)
+        return 2;
+    else if(num >=10 && num <=19 )
+        return 1;
+}
+  quarters: function (number){
+   num = currency(number);
+    num = parseInt(num.substring(num.length-3,num.length));
+    if(num % 25 ===0)
+        return num / 25;
+    else
+        return 0;}
+  ones: function (number){
+   num = currency(number);
+    num = parseInt(num[num.length-4]);
+    if(num % 5 !=0)
+        return num;
+    else
+        return 0;}
+  fives: function (number){
+   num = currency(number);
+    num = parseInt(num[num.length-4]);
+    if(num % 5===0)
+        return num / 5;
+    else
+        return 0;}
+  tens: function (number){
+   num = currency(number);
+    num = parseInt(num.substring(num.length-5,num.length-3));
+    if(num % 25 !=0)
+        return num;
+    else
+        return 0;}
+  twenties: function (number){
+   num = currency(number);
+    num = parseInt(num[num.length-1]);
+    if(num % 5 !=0)
+        return num;
+    else
+        return 0;}
+  fifties: function (number){
+   num = currency(number);
+    num = parseInt(num[num.length-1]);
+    if(num % 5 !=0)
+        return num;
+    else
+        return 0;}
+  hundreds: function (number){
+   num = currency(number);
+    num = parseInt(num[num.length-1]);
+    if(num % 5 !=0)
+        return num;
+    else
+        return 0;}
     
 }
