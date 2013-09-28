@@ -9,29 +9,27 @@ var emptyarray = [];
 var spacecount = 0;
 	for (var len = 0; len <= (fragarray.length-1); len++) {
 		var element = fragarray[len];
-		if(element) {
-			element = element.trim();
+        
 		
+        if(element) {
+			element = element.trim();
+            //console.log(element);
+		}
 		if (element.length === number) {
-		//console.log(element);
+		
 			emptyarray.push(element);
+           // console.log(emptyarray); //test
 			if (element === "" || element ===" ")
 			spacecount++;
-			
-			
-		}
-		}
-		else if(spacecount === 0)
-		return "Null";
+        }
+    }
 		
-		
-	}
 	if(emptyarray.length===0 && number >0 )
 		return "no element exists that has that length";
-		else if(number <0)
+		else if(number <0 || typeof number != 'number')
 		return "Don't be a jerk!";
 	if (spacecount >0)
-	return "you have " + spacecount + " empty strings";
+	return "you have " + spacecount + " empty or undefined strings";
 
 return emptyarray;
 }
