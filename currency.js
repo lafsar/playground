@@ -25,20 +25,20 @@ var denominations = [
     {key:'fifties: ',value:5000},
     {key:'hundreds: ',value:10000}];  
     var finalnum = number.toString();
-    //console.log(finalnum);
+
     for(var i=0; i<=finalnum.length-1; i++) {
         if(finalnum[i] ==='.'){
             finalnum= finalnum.split("");
             finalnum.splice(i,1); 
-           // console.log(finalnum);
+          
             if(finalnum[i] != null){
                 finalnum = finalnum.slice(0,i+2);
-           // console.log(finalnum)    
+           
             }
-         }//truncate extraneous digits
+         }
     }
   
-    //if (typeof finalnum != 'string'); 
+     
      
      if( Object.prototype.toString.call(finalnum ) === '[object Array]' )
         finalnum=finalnum.join(''); //if result is an array make it a string
