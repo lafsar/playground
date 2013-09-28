@@ -54,7 +54,7 @@ var tempmoney = [];
      
      if (divided >= 1){
         document.writeln(denom.key,divided,',',"<br>")
-        console.log(denom.key,divided);
+        //console.log(denom.key,divided);
         finalnum -= divided * val; 
      }
      if (finalnum ==0)
