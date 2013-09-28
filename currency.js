@@ -12,6 +12,7 @@ For instance, given 7.23, it should return:
 
 //convert int, float or string to valid format first
 var currency = function (number) {
+var y=0;
 var denominations = [
     {key: 'pennies: ', value:1},
     {key:'nickels: ', value:5},
@@ -41,8 +42,8 @@ var denominations = [
      
      if( Object.prototype.toString.call(finalnum ) === '[object Array]' )
         finalnum=finalnum.join(''); //if result is an array make it a string
-var tempmoney = [];    
-    
+   
+var finale =[];    
  for (var x=denominations.length-1; x>=0; x--) {
  var denom = denominations[x];
      for(key in denom) {
@@ -53,12 +54,15 @@ var tempmoney = [];
      var divided = Math.floor(finalnum / val);
      
      if (divided >= 1){
-        document.writeln(denom.key,divided,',',"<br>")
-        //console.log(denom.key,divided);
-        finalnum -= divided * val; 
+        finalnum -= divided * val;
+        var tempmoney = {key:denom.key, value:divided}
+        finale.push(tempmoney);
+        
      }
      if (finalnum ==0)
          break;
  }
+   
+    return finale;
 }
 
