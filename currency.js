@@ -43,7 +43,7 @@ var denominations = [
      if( Object.prototype.toString.call(finalnum ) === '[object Array]' )
         finalnum=finalnum.join(''); //if result is an array make it a string
    
-var finale =[];    
+var finale ={};    
  for (var x=denominations.length-1; x>=0; x--) {
  var denom = denominations[x];
      for(key in denom) {
@@ -55,9 +55,9 @@ var finale =[];
      
      if (divided >= 1){
         finalnum -= divided * val;
-        var tempmoney = {key:denom.key, value:divided}
-        finale.push(tempmoney);
-        
+          finale[denom.key] = divided;
+       
+ 
      }
      if (finalnum ==0)
          break;
@@ -65,4 +65,3 @@ var finale =[];
    
     return finale;
 }
-
