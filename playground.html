@@ -1,9 +1,71 @@
+<!Doctype html>
 <html>
-    <head>
-        
-    </head>
-    <body>
-        <h1> HTML FILE</h1>
-        <script src="./playground.js"></script>
-    </body>
+<head>
+	<Title>Luke's Playground</Title>
+</head>
+<body>
+	<ol>
+		<li> <h3>Function that reverses the order of a string</h3>
+		<script src="./reversal.js"></script>
+		<script>
+			initstring = ' what is up ?  '; //enter string to be reversed here
+			document.write("<p>The initial string is: </p>");
+			document.write(initstring);
+			document.write("<p> The string in reversed order is: </p>");
+			document.write(reversal(initstring));
+		
+		</script>
+		</li>
+		<li> <h3>Function that takes an array of text fragments & a length</h3>
+			<h3>then returns a list of fragments that are longer than said length only</h3>
+			<!--whitespace before and after dont count-->
+			<script src="./correctlength.js"></script>
+			<script>
+				var initput = ['hello','goodbye','what is up?', 'at', 'hella',' ',' ']; //fragmented array of texts
+				//var initput = ['asdafs',' hell ','hi'];
+				var num = 0; //length controller
+				document.write("<p> The array of text fragments is: </p>");
+				document.write(initput);
+				document.write("<p> The length control number is: </p>");
+				document.write(num);
+				document.write("<p> The result is: </p>");
+				document.write(correctlength(initput, num));
+			</script>
+		</li>
+		<li> <h3> function that returns 'Good morning' if it is the morning, </h3>
+			<h3>'Good afternoon' if it is the afternoon, and 'Good evening' if it is the evening.</h3>
+			<script>
+			var d = new Date();
+			var hours = d.getHours();
+			var minutes = d.getMinutes();
+			//change values to strings
+			//concat strings to merged string
+			//change string to a value
+			var greetings = function(hours, minutes) {
+				hours = hours.toString();
+				minutes = minutes.toString();
+				var time = parseInt(hours.concat(minutes));
+				if (time>=0 && time<1200)
+					var greeting = 'Good Morning.';
+				if (time>=1200 && time <1800)
+					var greeting = 'Good afternoon.';
+				if (time>=1800 && time <2400)
+					var greeting = 'Good Evening.';
+				return greeting;
+			}
+			document.write(greetings(hours, minutes));
+			</script>
+		</li>
+		<li><h3>Function that given a dollar amount returns a object of the </h3>
+			<h3>number of bills and coins needed to return change.</h3>
+			<script src="./currency.js"></script>
+			<script>
+			var amount = "352.48";
+			//document.write(currency(amount));
+			</script>
+		</li>
+
+</body>
+
+
 </html>
