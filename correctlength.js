@@ -3,7 +3,7 @@
 //find the length of each element
 //if the length matches number, push that element onto a new array
 //when finished iterating, return an array of strings
-
+//done
 var correctlength = function (fragarray, number) {
 var emptyarray = [];
 var spacecount = 0;
